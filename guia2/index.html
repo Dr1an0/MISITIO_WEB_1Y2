@@ -4,63 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi sitio web</title>
+    <title>Panadería Santa Rosa</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
-        <h1>Mi sitio web</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="contenedor-tarjetas">
-            <article class="tarjeta">
-                <h2>Servicio 1</h2>
-                <p>Descripción del servicio 1.</p>
-            </article>
+    <h1>Panadería Santa Rosa</h1>
 
-            <article class="tarjeta">
-                <h2>Servicio 2</h2>
-                <p>Descripción del servicio 2.</p>
-            </article>
+    <h2>Bienvenidos</h2>
+    <p>
+        Somos una panadería que ofrece panes frescos y productos
+        preparados para compartir en familia.
+    </p>
 
-            <article class="tarjeta">
-                <h2>Servicio 3</h2>
-                <p>Descripción del servicio 3.</p>
-            </article>
-        </section>
+    <h2>Nuestros productos</h2>
 
-        <section class="galeria">
-            <img src="../img/Messi.jpg" alt="Fotografía de Lionel Messi">
-            <img src="../img/Messi.jpg" alt="Segunda imagen de Lionel Messi">
-            <img src="../img/Messi.jpg" alt="Tercera imagen de Lionel Messi">
-        </section>
+    <div class="catalogo">
 
-        <section>
-            <h2>Contáctanos</h2>
-            <form>
-                <label for="nombre">Nombre:</label><br>
-                <input type="text" id="nombre" name="nombre"><br><br>
+        <div class="producto">
+            <img src="../img/yema.jpg" alt="Pan de yema">
+            <h3>Pan de yema</h3>
+            <p>Precio: S/ 0.50 por unidad</p>
+        </div>
 
-                <label for="mensaje">Mensaje:</label><br>
-                <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea><br><br>
+        <div class="producto">
+            <img src="../img/frances.jpg" alt="Pan francés">
+            <h3>Pan francés</h3>
+            <p>Precio: S/ 0.30 por unidad</p>
+        </div>
 
-                <input type="submit" value="Enviar">
-            </form>
-        </section>
-    </main>
+        <div class="producto">
+            <img src="../img/chancay.jpg" alt="Pan chancay">
+            <h3>Chancay</h3>
+            <p>Precio: S/ 0.60 por unidad</p>
+            <p class="agotado">Agotado</p>
+        </div>
 
-    <footer>
-        <p>&copy; 2026 Mi sitio web. Todos los derechos reservados.</p>
-    </footer>
+        <div class="producto">
+            <img src="../img/torta.jpg" alt="Torta de chocolate">
+            <h3>Torta de chocolate</h3>
+            <p>Precio: S/ 45.00 por torta</p>
+        </div>
+
+    </div>
+
+    <h2>Contáctanos</h2>
+    <p>Visítanos para conocer nuestros productos.</p>
+    <p>Atendemos de lunes a sábado.</p>
+
+    <p><a href="pedidos.html">Realizar un pedido</a></p>
+    <a href="../index.html">Regresar al Menu Principal</a>
+
 </body>
 
 </html>

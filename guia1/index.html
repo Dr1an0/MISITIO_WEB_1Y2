@@ -1,39 +1,60 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MI PRIMERA PAGINA WEB</title>
+    <title>Panaderia Santa Rosa | Pan Caliente todos los dias</title>
 </head>
 
-<body>
-    <h1>Bienvenidos a mi página web</h1>
-
-    <h2>Sobre mí</h2>
-    <p>Soy estudiante de Ingeniería de Sistemas y estoy aprendiendo desarrollo web.</p>
-
-    <h2>Mi imagen</h2>
-    <img src="../img/Messi.jpg" alt="Foto de Messi" width="100">
-
-    <p>
-        Visita mi universidad:
-        <a href="https://www.upn.edu.pe/" target="_blank" rel="noopener noreferrer">UPN</a>
-    </p>
-
-    <h2>Formulario de contacto</h2>
-    <form action="#" method="post">
-        <label for="nombre">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre" required><br><br>
-
-        <label for="correo">Correo electrónico:</label><br>
-        <input type="email" id="correo" name="correo" required><br><br>
-
-        <label for="mensaje">Mensaje:</label><br>
-        <textarea id="mensaje" name="mensaje" rows="4" cols="30"></textarea><br><br>
-
-        <input type="submit" value="Enviar">
-    </form>
+<body bgcolor="EEE8AA">
+    <header>
+        <p align="center"><strong>Panadería Santa Rosa</strong></p>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Pan caliente desde 1987</h1>
+            <p>Somos una panadería familiar. Horneamos cada madrugada con recetas de tres generaciones.</p>
+        </section>
+        <section id="productos">
+            <h2>Nuestros productos</h2>
+            <ul>
+                <li>Pan francés: S/ 0.30 la unidad</li>
+                <li>Pan de yema: S/ 0.50 la unidad</li>
+                <li>Chancay: S/ 0.60 la unidad</li>
+                <li>Torta de chocolate: S/ 45.00 (entera)</li>
+            </ul>
+            <p><strong>Pedidos de tortas con 24 horas de anticipación.</strong></p>
+            <figure>
+                
+                <img src="../img/panes.jpg" alt="Canasta de panes de yema dorados recién horneados" width="400">
+                <figcaption>Pan de yema, nuestro favorito de la casa.</figcaption>
+            </figure>
+            <figure>
+                <img src="../img/torta.jpg" alt="Torta de chocolate de dos pisos decorada con fresas" width="400">
+                <figcaption>Tortas por encargo para cumpleaños.</figcaption>
+            </figure>
+        </section>
+    </main>
+    <footer id="contacto">
+        <h2>Visítanos</h2>
+        <address>
+            Av. Los Panaderos 123, [distrito]<br>
+            Celular: <a href="tel:+51900000000">900 000 000</a>
+        </address>
+        <p>Lunes a sábado de 6:00 a 21:00 · Domingos de 6:00 a 13:00</p>
+        <a href="../index.html">Regresar al Menu</a>
+    </footer>
+    
 </body>
 
 </html>
