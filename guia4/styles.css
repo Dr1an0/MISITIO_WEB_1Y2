@@ -1,0 +1,544 @@
+/* ===== 1. Configuración general ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #F8F5ED;
+    color: #35251D;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ===== 2. Encabezado ===== */
+
+.encabezado {
+    background: linear-gradient(120deg, #3B261C, #70462E);
+    color: #FFF9EC;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.contenido-header {
+    max-width: 700px;
+    margin: auto;
+}
+
+.marca {
+    color: #E9C98C;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.encabezado h1 {
+    font-family: Georgia, serif;
+    font-size: 2.8rem;
+    margin: 1rem 0;
+}
+
+.subtitulo {
+    color: #F0E4D2;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+}
+
+.btn-explorar {
+    display: inline-block;
+    background: #D9AD64;
+    color: #35251D;
+    text-decoration: none;
+    padding: 0.85rem 1.6rem;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.btn-explorar:hover {
+    background: #F0D49E;
+}
+
+/* ===== 3. Presentación ===== */
+
+.presentacion {
+    text-align: center;
+    max-width: 700px;
+    margin: 3.5rem auto;
+}
+
+.etiqueta {
+    color: #A4773E;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.presentacion h2,
+.titulo-seccion h2,
+.pedido-encabezado h2 {
+    font-family: Georgia, serif;
+    color: #492F22;
+}
+
+.presentacion h2 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+.presentacion p:last-child {
+    color: #78695E;
+    line-height: 1.7;
+}
+
+/* ===== 4. Catálogo ===== */
+
+.seccion-catalogo {
+    margin-bottom: 3.5rem;
+}
+
+.titulo-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.titulo-seccion h2 {
+    font-size: 1.8rem;
+    margin: 0.4rem 0 0;
+}
+
+.nota-catalogo {
+    color: #85766A;
+    font-size: 0.9rem;
+}
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.producto {
+    background: #FFFFFF;
+    border: 1px solid #E7DDCE;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(67, 43, 28, 0.06);
+}
+
+.producto img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.producto-info {
+    padding: 1.3rem;
+}
+
+.categoria {
+    color: #A4773E;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.producto h3 {
+    font-family: Georgia, serif;
+    font-size: 1.35rem;
+    margin: 0.6rem 0;
+    color: #492F22;
+}
+
+.producto-info p {
+    color: #82756B;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    min-height: 40px;
+}
+
+.producto-pie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.2rem;
+}
+
+.producto-pie strong {
+    color: #68442D;
+    font-size: 1.05rem;
+}
+
+.producto-pie small {
+    font-size: 0.75rem;
+    color: #948579;
+    font-weight: normal;
+}
+
+.btn-anadir {
+    background: #68442D;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 25px;
+    padding: 0.7rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-anadir:hover {
+    background: #96633E;
+}
+
+/* ===== 5. Mi pedido ===== */
+
+#mi-pedido {
+    background: #FFFFFF;
+    border: 1px solid #E5D8C6;
+    border-radius: 18px;
+    padding: 2rem;
+    margin: 2rem 0 4rem;
+    box-shadow: 0 7px 20px rgba(67, 43, 28, 0.06);
+}
+
+.pedido-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #EDE5DA;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.pedido-encabezado h2 {
+    font-size: 1.8rem;
+    margin: 0.4rem 0;
+}
+
+.texto-pedido {
+    color: #897A6E;
+    font-size: 0.9rem;
+}
+
+.icono-canasta {
+    font-size: 2.2rem;
+    background: #F8F1E5;
+    padding: 0.8rem;
+    border-radius: 50%;
+}
+
+#pedido-vacio {
+    color: #897A6E;
+    background: #FAF7F1;
+    border: 1px dashed #D9C8B2;
+    border-radius: 10px;
+    padding: 1.2rem;
+    text-align: center;
+}
+
+#lista-pedido {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.8rem;
+}
+
+#lista-pedido li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    background: #FAF7F1;
+    border: 1px solid #EEE4D7;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.nombre-producto {
+    color: #4D3528;
+    font-weight: bold;
+}
+
+.detalle-producto {
+    display: block;
+    color: #8A796C;
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+}
+
+.controles {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-cantidad {
+    background: #EDE2D2;
+    color: #543827;
+    border: none;
+    border-radius: 7px;
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-cantidad:hover {
+    background: #DCC6A8;
+}
+
+.cantidad {
+    min-width: 22px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn-quitar {
+    background: #F5E5E0;
+    color: #9B4939;
+    border: none;
+    border-radius: 7px;
+    padding: 0.55rem 0.8rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-quitar:hover {
+    background: #EBD0C8;
+}
+
+/* ===== 6. Sugerencia de mantequilla ===== */
+
+.sugerencia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    background: #F7F0E2;
+    border: 1px solid #E5D1AE;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 1.2rem;
+}
+
+.sugerencia p {
+    margin: 0.4rem 0;
+    color: #563C2B;
+}
+
+.sugerencia small {
+    color: #897766;
+}
+
+#btn-mantequilla {
+    background: #A4773E;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 20px;
+    padding: 0.7rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btn-mantequilla:hover {
+    background: #805B30;
+}
+
+/* ===== 7. Resumen del pedido ===== */
+
+.resumen-pedido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid #EDE5DA;
+    margin-top: 1.5rem;
+    padding-top: 1.3rem;
+}
+
+.texto-total {
+    color: #897A6E;
+    margin: 0 0 0.3rem;
+}
+
+#total {
+    color: #68442D;
+    font-family: Georgia, serif;
+    font-size: 1.8rem;
+}
+
+#btn-vaciar {
+    background: #F2E6DC;
+    color: #754B38;
+    border: 1px solid #DCC8B7;
+    border-radius: 25px;
+    padding: 0.8rem 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btn-vaciar:hover {
+    background: #E8D5C7;
+}
+
+#btn-vaciar:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#aviso {
+    color: #52764C;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #C18A43;
+    outline-offset: 3px;
+}
+
+#titulo-pedido:focus {
+    outline: 3px solid #C18A43;
+    outline-offset: 4px;
+}
+
+/* ===== 8. Pie de página ===== */
+
+footer {
+    background: #3B261C;
+    color: #EADCCB;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.marca-footer {
+    color: #E9C98C;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+footer small {
+    color: #BFAE9D;
+}
+
+/* ===== 9. Ajustes para pantallas pequeñas ===== */
+
+@media (max-width: 650px) {
+    .encabezado h1 {
+        font-size: 2rem;
+    }
+
+    .catalogo {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-seccion {
+        display: block;
+    }
+
+    .producto img {
+        height: 200px;
+    }
+
+    #mi-pedido {
+        padding: 1.2rem;
+    }
+
+    .resumen-pedido {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .sugerencia {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* ===== 10. Indicaciones del pedido ===== */
+
+.indicaciones {
+    margin-top: 1.5rem;
+    padding: 1.2rem;
+    background: #FAF7F1;
+    border: 1px solid #E7DDCE;
+    border-radius: 12px;
+}
+
+.indicaciones label {
+    display: block;
+    color: #492F22;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.ayuda-notas {
+    color: #897A6E;
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+}
+
+#notas {
+    width: 100%;
+    padding: 0.9rem;
+    border: 1px solid #D9C8B2;
+    border-radius: 9px;
+    background: #FFFFFF;
+    color: #35251D;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    resize: vertical;
+}
+
+#notas:focus {
+    outline: 2px solid #C18A43;
+    border-color: #A4773E;
+}
+
+.contador-notas {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.6rem;
+    font-size: 0.8rem;
+    color: #897A6E;
+}
+
+#error-notas {
+    color: #A33D32;
+}
+
+.btn-volver {
+    display: inline-block;
+    background-color: #70452D;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.btn-volver:hover {
+    background-color: #5D3825;
+}

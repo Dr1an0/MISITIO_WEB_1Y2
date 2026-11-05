@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>La canasta de Santa Rosa</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="pedido.js" defer></script>
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <div class="contenido-header">
+            <p class="marca">PANADERÍA SANTA ROSA</p>
+            <h1>La canasta de Santa Rosa</h1>
+            <p class="subtitulo">Elige tus productos favoritos y arma tu pedido.</p>
+            <a href="#catalogo" class="btn-explorar">Ver productos</a>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="presentacion">
+            <p class="etiqueta">HECHO CON TRADICIÓN</p>
+            <h2>Recién horneado para ti</h2>
+            <p>Selecciona los productos que deseas llevar. Puedes aumentar cantidades,
+                quitar productos y consultar el total de tu compra.</p>
+        </section>
+
+        <section id="catalogo" class="seccion-catalogo" aria-label="Catálogo de productos">
+
+            <div class="titulo-seccion">
+                <div>
+                    <p class="etiqueta">NUESTRO CATÁLOGO</p>
+                    <h2>Productos disponibles</h2>
+                </div>
+                <p class="nota-catalogo">Selecciona y añade a tu canasta</p>
+            </div>
+
+            <div class="catalogo">
+
+                <article class="producto" data-nombre="Pan de yema" data-precio="0.50">
+                    <img src="../img/yema.jpg" alt="Panes de yema recién horneados">
+                    <div class="producto-info">
+                        <span class="categoria">PAN TRADICIONAL</span>
+                        <h3>Pan de yema</h3>
+                        <p>Suave, doradito y perfecto para acompañar.</p>
+                        <div class="producto-pie">
+                            <strong>S/ 0.50 <small>/ unidad</small></strong>
+                            <button type="button" class="btn-anadir">+ Añadir</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="Pan francés" data-precio="0.30">
+                    <img src="../img/frances.jpg" alt="Pan francés de corteza dorada">
+                    <div class="producto-info">
+                        <span class="categoria">PAN DEL DÍA</span>
+                        <h3>Pan francés</h3>
+                        <p>Clásico, crujiente y recién salido del horno.</p>
+                        <div class="producto-pie">
+                            <strong>S/ 0.30 <small>/ unidad</small></strong>
+                            <button type="button" class="btn-anadir">+ Añadir</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="Chancay" data-precio="0.60">
+                    <img src="../img/chancay.jpg" alt="Panes chancay suaves y dorados">
+                    <div class="producto-info">
+                        <span class="categoria">ESPECIALIDAD</span>
+                        <h3>Chancay</h3>
+                        <p>Un pan dulce y esponjoso para disfrutar.</p>
+                        <div class="producto-pie">
+                            <strong>S/ 0.60 <small>/ unidad</small></strong>
+                            <button type="button" class="btn-anadir">+ Añadir</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-nombre="Torta de chocolate" data-precio="45.00">
+                    <img src="../img/torta.jpg" alt="Torta de chocolate decorada">
+                    <div class="producto-info">
+                        <span class="categoria">REPOSTERÍA</span>
+                        <h3>Torta de chocolate</h3>
+                        <p>Delicioso sabor a chocolate para compartir.</p>
+                        <div class="producto-pie">
+                            <strong>S/ 45.00 <small>/ entera</small></strong>
+                            <button type="button" class="btn-anadir">+ Añadir</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="mi-pedido" aria-labelledby="titulo-pedido">
+
+            <div class="pedido-encabezado">
+                <div>
+                    <p class="etiqueta">TU COMPRA</p>
+                    <h2 id="titulo-pedido" tabindex="-1">Mi pedido</h2>
+                    <p class="texto-pedido">Revisa los productos que has seleccionado.</p>
+                </div>
+                <span class="icono-canasta" aria-hidden="true">🛒</span>
+            </div>
+
+            <p id="pedido-vacio">Tu pedido está vacío. Añade productos del catálogo.</p>
+
+            <ul id="lista-pedido"></ul>
+
+            <div id="sugerencia-mantequilla" class="sugerencia" hidden>
+                <div>
+                    <span class="etiqueta">UNA SUGERENCIA</span>
+                    <p>¿Te gustaría añadir mantequilla por <strong>S/ 2.50</strong>?</p>
+                    <small>Es opcional. Tú decides si deseas agregarla.</small>
+                </div>
+                <button type="button" id="btn-mantequilla">Añadir</button>
+            </div>
+
+            <div class="indicaciones">
+                <label for="notas">¿Deseas agregar alguna indicación?</label>
+
+                <p class="ayuda-notas">
+                    Puedes escribir detalles sobre tu pedido. Este campo es opcional.
+                </p>
+
+                <textarea
+                    id="notas"
+                    maxlength="200"
+                    placeholder="Ejemplo: Por favor, separar los panes en una bolsa..."
+                    rows="4"
+                ></textarea>
+
+                <div class="contador-notas">
+                    <span id="error-notas"></span>
+                    <span id="contador">0 / 200 caracteres</span>
+                </div>
+            </div>
+
+            <div class="resumen-pedido">
+                <div>
+                    <p class="texto-total">Total de tu pedido</p>
+                    <strong id="total">S/ 0.00</strong>
+                </div>
+                <button type="button" id="btn-vaciar" disabled>Vaciar pedido</button>
+            </div>
+
+            <p id="aviso" role="status" aria-live="polite"></p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p class="marca-footer">PANADERÍA SANTA ROSA</p>
+        <p>El sabor de lo tradicional, recién hecho para ti.</p>
+        <small>2026 Panadería Santa Rosa</small>
+    </footer>
+<a href="../index.html" class="btn-volver">Volver al inicio</a>
+</body>
+</html>
